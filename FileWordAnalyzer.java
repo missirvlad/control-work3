@@ -29,3 +29,18 @@ public class FileWordAnalyzer {
                     wordFrequency.put(word, 1);
                 }
             }
+
+            System.out.println("Всего слов: " + wordCount);
+            System.out.println("Самое длинное слово: " + longestWord);
+
+            System.out.println("Количество одинаковых слов:");
+            for (Map.Entry<String, Integer> entry : wordFrequency.entrySet()) {
+                System.out.println(entry.getKey() + " : " + entry.getValue());
+            }
+
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не найден");
+        }
+    }
+}
